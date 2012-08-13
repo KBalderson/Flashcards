@@ -5,7 +5,7 @@
 <section>
   <ul>
     <%- @decks.each do |deck| %>
-      <li><%= link_to deck.name, "/decks/#{deck.id}" %></li>
+      <li><%= link_to deck.name, "/decks/#{deck.id}" %> - <%= link_to "[X]", "/decks/#{deck.id}", method: :delete, confirm: "Are you sure?" %> </li>
     <%- end %>
   </ul>
   <%= link_to "New Deck", "/decks/new" %>

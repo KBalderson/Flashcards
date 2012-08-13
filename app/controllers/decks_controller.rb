@@ -18,4 +18,10 @@ class DecksController < ApplicationController
     @deck = Deck.find(params[:id])
   end
   
+  def destroy
+    @deck = Deck.find(params[:id])
+    Deck.destroy(@deck)
+    redirect_to "/decks"
+  end
+  
 end

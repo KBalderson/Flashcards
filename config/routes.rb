@@ -1,8 +1,10 @@
 Flashcard::Application.routes.draw do
 
   get "/decks" => "decks#index"
-  get "/decks/:id" => "decks#show"
   get "/decks/new" => "decks#new"
+  get "/decks/:id" => "decks#show"
+  
+  delete "/decks/:id" => "decks#destroy"
   
   post "/decks" => "decks#create"
   
