@@ -1,0 +1,12 @@
+<header>
+  <h1>Flash... AAAAAAAAaaaaaa</h1>
+  <img src="http://upload.wikimedia.org/wikipedia/en/7/74/Flash_Rei.png" />
+</header>
+<section>
+  <ul>
+    <%- @decks.each do |deck| %>
+      <li><%= link_to deck.name, "/decks/#{deck.id}" %></li>
+    <%- end %>
+  </ul>
+  <%= link_to "New Deck", "/decks/new" %>
+</section>

@@ -1,0 +1,7 @@
+<header>
+<h1>Create a Deck</h1>
+</header>
+<%= form_for(@deck) do |form| %>
+  <%= form.text_field :name, placeholder: "Deck name" %>
+  <%= form.submit "Create Deck" %>
+<% end %>
