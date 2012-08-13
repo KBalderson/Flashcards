@@ -24,4 +24,14 @@ class DecksController < ApplicationController
     redirect_to "/decks"
   end
   
+  def edit
+    @deck = Deck.find(params[:id])
+  end
+  
+  def update
+    @deck = Deck.find(params[:id])
+    @deck.update_attributes(params[:deck])
+    redirect_to "/decks"
+  end
+  
 end

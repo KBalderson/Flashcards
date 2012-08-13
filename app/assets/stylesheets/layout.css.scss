@@ -1,0 +1,36 @@
+body {
+  background: #336699;
+}
+#main {
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #DDD;
+  padding: 30px;
+  
+  header {
+    text-align: center;
+  }
+}
+
+.deck-list {
+  width: 300px;
+  margin: 50px auto 0;
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  .deck {
+    margin-bottom: 10px;
+  }
+}
+
+.deck-form {
+  text-align: center;
+  margin-top: 10px;
+  
+  .input-append {
+    margin-bottom: 10px;
+  }
+}

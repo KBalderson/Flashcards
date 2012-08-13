@@ -3,10 +3,17 @@
   <img src="http://upload.wikimedia.org/wikipedia/en/7/74/Flash_Rei.png" />
 </header>
 <section>
-  <ul>
+  <div class="deck-list">
+    <h2>Decks</h2>
     <%- @decks.each do |deck| %>
-      <li><%= link_to deck.name, "/decks/#{deck.id}" %> - <%= link_to "[X]", "/decks/#{deck.id}", method: :delete, confirm: "Are you sure?" %> </li>
-    <%- end %>
-  </ul>
-  <%= link_to "New Deck", "/decks/new" %>
+      <div class="deck">
+        <div class="btn-group">
+          <%= link_to deck.name, "/decks/#{deck.id}", class: "btn", style: 'width:200px' %>
+          <%= link_to "/decks/#{deck.id}/edit", class: "btn"  do %> <i class="icon-edit"></i> <% end %>
+          <%= link_to "/decks/#{deck.id}", class: "btn", method: :delete, confirm: "Are you sure?" do %><i class="icon-remove"></i><% end %>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to "/decks/new" do %><i class="icon-plus"></i> New Deck<% end %>
+  </div>
 </section>
