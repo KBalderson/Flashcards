@@ -3,10 +3,11 @@ body {
 }
 #main {
   width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   border-radius: 10px;
   background: #DDD;
   padding: 30px;
+  box-shadow: 5px 0px 20px #000;
   
   header {
     text-align: center;
