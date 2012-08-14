@@ -23,4 +23,5 @@ $(document).ready(function() {
   $('.tip_me').tooltip(options);
   options.placement = 'left';
   $('.pop_me').popover(options);
+  $("#sortable").sortable();
 });
