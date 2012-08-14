@@ -12,7 +12,8 @@ class DecksController < ApplicationController
   def create
     @deck = Deck.new(params[:deck]) #params is a hash with indifferent access
     @deck.save
-    redirect_to "/decks"
+    #redirect_to "/decks" # # # 1-1 replacement decks_path(@deck) to "/decks" # actually don't need decks_path
+    redirect_to @deck
   end
   
   def show() 
@@ -22,7 +23,7 @@ class DecksController < ApplicationController
   def destroy
     @deck = Deck.find(params[:id])
     Deck.destroy(@deck)
-    redirect_to "/decks"
+    redirect_to decks_path
   end
   
   def edit
@@ -32,7 +33,7 @@ class DecksController < ApplicationController
   def update
     @deck = Deck.find(params[:id])
     @deck.update_attributes(params[:deck])
-    redirect_to "/decks"
+    redirect_to @deck
   end
   
 end
