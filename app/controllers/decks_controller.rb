@@ -1,5 +1,6 @@
 class DecksController < ApplicationController
-  
+  # CRUD
+  # always try to use 7 methods - index, new, create, show, destroy, edit, update
   def index
     @decks = Deck.all
   end
