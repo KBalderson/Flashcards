@@ -4,7 +4,7 @@
 <div class="deck-form">
   <%= form_for(@deck) do |form| %>
     <div class="input-append">
-      <%= form.text_field :name, placeholder: "Deck name" %><%= form.submit "Update", class: "btn" %>
+      <%= form.text_field :name, placeholder: "Deck name" %><%= form.submit "Update", class: "btn btn-success" %>
     </div>
     <%= link_to "/decks" do %> <i class="icon-circle-arrow-left"></i> Go Back <% end %>
   <% end %>

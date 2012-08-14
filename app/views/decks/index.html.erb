@@ -1,4 +1,4 @@
-<header class="page-header">
+<header>
   <h1>Flash... AAAAAAAAaaaaaa</h1>
   <img src="http://upload.wikimedia.org/wikipedia/en/7/74/Flash_Rei.png" />
 </header>
@@ -8,12 +8,14 @@
     <%- @decks.each do |deck| %>
       <div class="deck">
         <div class="btn-group">
-          <%= link_to "/decks/#{deck.id}", 'data-content' => "0 items<br />Updated #{time_ago_in_words deck.updated_at} ago", class: "btn pop_me", title: "#{deck.id}. #{deck.name}", style: "width:200px;" do %> <i class="icon-th-list" style="float:left;"></i><%= deck.name %> <% end %>
+          <div class="btn disabled" style="width:20px;"><%= deck.id %></div>
+          <%= link_to "/decks/#{deck.id}", 'data-content' => "0 items<br />Updated #{time_ago_in_words deck.updated_at} ago", class: "btn pop_me", title: "#{deck.id}. #{deck.name}", style: "width:167px;" do %> <i class="icon-th-list" style="float:left;"></i><%= deck.name %> <% end %>
           <%= link_to "/decks/#{deck.id}/edit", 'data-placement' => 'left', class: "btn btn-info tip_me", title: "edit"  do %> <i class="icon-edit"></i> <% end %>
-          <%= link_to "/decks/#{deck.id}", 'data-placement' => 'right', class: "btn btn-danger tip_me", title: "Delete", method: :delete, confirm: "Are you sure?" do %><i class="icon-remove"></i><% end %>
+          <%= link_to "/decks/#{deck.id}", 'data-placement' => 'right', class: "btn btn-danger tip_me", title: "Delete", method: :delete, confirm: "Are you sure?" do %><i class="icon-trash"></i><% end %>
         </div>
       </div>
     <% end %>
-    <%= link_to "/decks/new" do %><i class="icon-plus"></i> New Deck<% end %>
+    <%= link_to "/decks/new", class: "btn btn-success", style: 'float:right;' do %><i class="icon-plus"></i> New Deck<% end %>
+    <div style="clear:both;"></div>
   </div>
 </section>
