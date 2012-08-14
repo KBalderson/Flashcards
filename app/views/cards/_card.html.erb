@@ -1,0 +1,10 @@
+      <li>
+      <div class="deck">
+        <div class="btn-group">
+          <div class="btn disabled" style="width:20px; cursor:pointer;"><i class="icon-move"></i></div>
+          <%= link_to [card.deck,card], 'data-content' => "Answer: #{card.back}<br />Updated #{time_ago_in_words card.updated_at} ago", class: "btn pop_me", title: "#{card.front}", style: "width:167px;" do %> <i class="icon-th-list" style="float:left;"></i><%= card.front %> <% end %>
+          <%= link_to edit_deck_card_path(card.deck,card), 'data-placement' => 'left', class: "btn btn-info tip_me", title: "edit"  do %> <i class="icon-edit"></i> <% end %>
+          <%= link_to deck_card_path(card.deck,card), 'data-placement' => 'right', class: "btn btn-danger tip_me", title: "Delete", method: :delete, confirm: "Are you sure?" do %><i class="icon-trash"></i><% end %>
+        </div>
+      </div>
+      </li>

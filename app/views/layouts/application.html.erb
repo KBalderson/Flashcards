@@ -12,7 +12,12 @@
 
 <div id="main">
   <%= yield %>
+  <% if signed_in? %>
+    <div style="text-align:center; margin-top:30px;">
+      Flashcards for <%= current_user.name %><br />
+      <%= link_to "Sign Out", sign_out_path %>
+    </div>
+  <% end %>
 </div>
-
 </body>
 </html>

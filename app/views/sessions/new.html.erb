@@ -1,0 +1,9 @@
+<h1> Login </h1><br/><br/>
+<%= form_for(:session) do |form| %>
+  
+  <%= form.text_field :name, placeholder: 'name' %>
+  <%= form.password_field :password, placeholder: 'password' %>
+  
+  <%= form.submit :submit %>
+  
+<% end %>

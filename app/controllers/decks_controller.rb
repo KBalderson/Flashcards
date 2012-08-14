@@ -18,6 +18,7 @@ class DecksController < ApplicationController
   
   def show() 
     @deck = Deck.find(params[:id])
+    @cards = @deck.cards # where possible, call methods that interact with the model in the controller
     #redirect_to deck_cards_path(@deck)
   end
   
