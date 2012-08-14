@@ -1,0 +1,10 @@
+<header>
+  <div style="text-align:center; font-size:13px;">Front:</div>
+  <h1><%= @card.front %></h1>
+</header>
+<section>
+  <div style="text-align:center; font-size:13px;">Back:</div>
+  <h2 style="text-align:center;"><%= @card.back %></h2>
+  <%= link_to deck_cards_path(@deck) do %> <i class="icon-circle-arrow-left"></i> Go Back <% end %>
+  <%= link_to edit_deck_card_path(@deck,@card) do %> <i class="icon-edit"></i> Edit <% end %>
+</section>

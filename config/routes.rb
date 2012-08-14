@@ -1,6 +1,8 @@
 Flashcard::Application.routes.draw do
 
-  resources :decks # # # Replaces the following 10 lines of code
+  resources :decks do # # # Replaces the following 10 lines of code
+    resources :cards
+  end
   # get "/decks" => "decks#index"
   # get "/decks/new" => "decks#new"
   # get "/decks/:id" => "decks#show", as: :deck
@@ -11,5 +13,7 @@ Flashcard::Application.routes.draw do
   # post "/decks" => "decks#create"
   #   
   # put "/decks/:id" => "decks#update"
+  
+  
   
 end

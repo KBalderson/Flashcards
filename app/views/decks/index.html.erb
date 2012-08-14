@@ -10,16 +10,17 @@
       <li>
       <div class="deck">
         <div class="btn-group">
-          <div class="btn disabled" style="width:20px; cursor:pointer;"><i class="icon-move"></i></div>
-          <%= link_to deck, 'data-content' => "0 items<br />Updated #{time_ago_in_words deck.updated_at} ago", class: "btn pop_me", title: "#{deck.id}. #{deck.name}", style: "width:167px;" do %> <i class="icon-th-list" style="float:left;"></i><%= deck.name %> <% end %>
-          <%= link_to edit_deck_path(deck), 'data-placement' => 'left', class: "btn btn-info tip_me", title: "edit"  do %> <i class="icon-edit"></i> <% end %>
-          <%= link_to deck, 'data-placement' => 'right', class: "btn btn-danger tip_me", title: "Delete", method: :delete, confirm: "Are you sure?" do %><i class="icon-trash"></i><% end %>
+          <%= link_to deck, 'data-content' => "#{ deck.cards.count} items<br />Updated #{time_ago_in_words deck.updated_at} ago", class: "btn pop_me", title: "#{deck.name} Deck", style: "width:145px;" do %> <i class="icon-th-list" style="float:left;"></i><%= deck.name %> <% end %>
+          <%= link_to deck_cards_path(deck), class: "btn" do %> <%= deck.cards.count %> <% end %>
+          <%= link_to new_deck_card_path(deck), 'data-placement' => 'left', class: "btn btn-success tip_me", title: "add a card"  do %> <i class="icon-plus"></i> <% end %>
+          <%= link_to edit_deck_path(deck), 'data-placement' => 'bottom', class: "btn btn-info tip_me", title: "edit"  do %> <i class="icon-edit"></i> <% end %>
+          <%= link_to deck, 'data-placement' => 'right', class: "btn btn-danger tip_me", title: "Delete", method: :delete, confirm: "Destroy #{deck.name} and all cards??" do %><i class="icon-trash"></i><% end %>
         </div>
       </div>
       </li>
     <% end %>
     </ul>
-    <%= link_to new_deck_path, class: "btn btn-success", style: 'float:right;' do %><i class="icon-plus"></i> New Deck<% end %>
+    <%= link_to new_deck_path, class: "btn btn-success", style: 'float:right; width:84px;' do %><i class="icon-plus"></i> New Deck<% end %>
     <div style="clear:both;"></div>
   </div>
 </section>

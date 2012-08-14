@@ -18,6 +18,7 @@ class DecksController < ApplicationController
   
   def show() 
     @deck = Deck.find(params[:id])
+    #redirect_to deck_cards_path(@deck)
   end
   
   def destroy
