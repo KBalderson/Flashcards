@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function() {
+  var options = {
+    placement: 'bottom'
+  };
+  
+  $('.tip_me').tooltip(options);
+  options.placement = 'left';
+  $('.pop_me').popover(options);
+});
