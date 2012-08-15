@@ -18,7 +18,7 @@ class CardsController < ApplicationController
     deck = Deck.find(params[:deck_id])
     @card = deck.cards.new(params[:card])
     @card.save
-    redirect_to deck_cards_path(params[:deck_id])
+    redirect_to deck 
   end
   
   def edit
