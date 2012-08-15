@@ -11,7 +11,7 @@
       <div class="deck">
         <div class="btn-group">
           <%= link_to deck, 'data-content' => "#{ deck.cards.count} items<br />Updated #{time_ago_in_words deck.updated_at} ago", class: "btn pop_me", title: "#{deck.name} Deck", style: "width:145px;" do %> <i class="icon-th-list" style="float:left;"></i><%= deck.name %> <% end %>
-          <%= link_to deck_cards_path(deck), class: "btn" do %> <%= deck.cards.count %> <% end %>
+          <%= link_to deck, class: "btn" do %> <%= deck.cards.count %> <% end %>
           <%= link_to new_deck_card_path(deck), 'data-placement' => 'left', class: "btn btn-success tip_me", title: "add a card"  do %> <i class="icon-plus"></i> <% end %>
           <%= link_to edit_deck_path(deck), 'data-placement' => 'bottom', class: "btn btn-info tip_me", title: "edit"  do %> <i class="icon-edit"></i> <% end %>
           <%= link_to deck, 'data-placement' => 'right', class: "btn btn-danger tip_me", title: "Delete", method: :delete, confirm: "Destroy #{deck.name} and all cards??" do %><i class="icon-trash"></i><% end %>
