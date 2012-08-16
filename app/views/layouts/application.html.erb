@@ -1,3 +1,6 @@
+<%- if (!signed_in? && current_page?(sign_in_path)) %>
+    <%- # redirect_to sign_in_path %>
+<%- end  %>
 <!DOCTYPE html>
 <html>
 <head>
