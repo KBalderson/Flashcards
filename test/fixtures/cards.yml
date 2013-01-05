@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  front: MyText
-  back: MyText
+  front: Card Front 1
+  back: Card Front 2
   deck: 
 
 two:
