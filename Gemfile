@@ -7,7 +7,7 @@ gem 'bcrypt-ruby'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -24,13 +24,17 @@ end
 
 gem 'jquery-rails'
 
-group :test, :development do
-  gem 'factory_girl_rails'
-end
+group :test do
 
-group :test  do
   gem "rspec"
   gem "rspec-rails", "~> 2.0"
+
+  gem 'factory_girl_rails'
+
+  gem 'cucumber-rails'
+
+  gem 'capybara'
+
 end
 
 # To use ActiveModel has_secure_password
